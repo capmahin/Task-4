@@ -17,11 +17,23 @@ const cubeMesh = new THREE.Mesh(
 scene.add(cubeMesh)
 
 // initialize the camera
-const camera = new THREE.PerspectiveCamera(
-  35, 
-  window.innerWidth / window.innerHeight,
-  0.1,
-  200)
+// const camera = new THREE.PerspectiveCamera(
+//   35, 
+//   window.innerWidth / window.innerHeight,
+//   0.1,
+//   200)
+
+const camera = new THREE.OrthographicCamera(
+  -1,
+1,
+1,
+-1,
+0.1,
+200
+)
+
+
+
 camera.position.z = 5
 
 // initialize the renderer
