@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Starter</title>
-        <link rel="stylesheet" href="./style.css">
-	</head>
-	<body>
-        <canvas class="threejs"></canvas>
-        <script type="module" src="./script.js"></script>
-	</body>
-</html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Selection with Raycasting</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            z-index: 100;
+            font-size: 18px;
+        }
+        #selection-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 100;
+            font-size: 16px;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">Click on any cube to select it | Drag to rotate view | Scroll to zoom</div>
+    <div id="selection-info">
+        <strong>Selected Cube:</strong><br>
+        <span id="cube-name">None</span>
+    </div>
+
+    <!-- Main Application Script -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
