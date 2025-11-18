@@ -3,7 +3,7 @@ export default {
     publicDir: '../static/',
     base: './',
     build: {
-        outDir: './dist',
+        outDir: '../dist',
         emptyOutDir: true
     }
 }
